@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=4 uid="uid://b0nwjka2wmbws"]
+[gd_scene load_steps=5 format=4 uid="uid://b0nwjka2wmbws"]
 
 [ext_resource type="Texture2D" uid="uid://07hs36akbp2k" path="res://Assets/13_School_16x16.png" id="1_dq27g"]
 
@@ -2542,6 +2542,9 @@ texture = ExtResource("1_dq27g")
 [sub_resource type="TileSet" id="TileSet_7bd62"]
 sources/0 = SubResource("TileSetAtlasSource_yvv17")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dq27g"]
+size = Vector2(51, 25)
+
 [node name="Arco" type="StaticBody2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -2549,6 +2552,12 @@ position = Vector2(20, 12)
 tile_map_data = PackedByteArray("AAD9//7/AAAZADwAAAD9////AAAZAD0AAAD9/wAAAAAZAD4AAAD+//7/AAAaADwAAAD+////AAAaAD0AAAD///7/AAAbADwAAAD/////AAAbAD0AAAAAAP7/AAAcADwAAAAAAP//AAAcAD0AAAAAAAAAAAAcAD4AAAA=")
 tile_set = SubResource("TileSet_7bd62")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="Palos" type="CollisionPolygon2D" parent="."]
 position = Vector2(20, 12)
 polygon = PackedVector2Array(10, 6, 10, -21, -43, -21, -43, 8, -49, 8, -49, -33, 14, -33, 16, -33, 16, 8, 10, 8)
+
+[node name="AreaAdentro" type="Area2D" parent="."]
+position = Vector2(3.5, 3.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAdentro"]
+shape = SubResource("RectangleShape2D_dq27g")
