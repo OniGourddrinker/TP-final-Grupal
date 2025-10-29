@@ -2342,6 +2342,11 @@ sources/0 = SubResource("TileSetAtlasSource_i8e8a")
 
 [node name="Cancha" type="Node2D"]
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(402, 46, 785, 47, 790, 587, 396, 585, 401, 29, 796, 32, 798, 597, 388, 594, 391, 27)
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-576, -340)
 scale = Vector2(2, 2)
