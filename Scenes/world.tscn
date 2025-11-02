@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://bktce58tsncdx"]
+[gd_scene load_steps=16 format=4 uid="uid://bktce58tsncdx"]
 
 [ext_resource type="Texture2D" uid="uid://07hs36akbp2k" path="res://Assets/13_School_16x16.png" id="1_5a7ea"]
 [ext_resource type="Texture2D" uid="uid://cf34w7u3lbcak" path="res://Assets/GRASS+.png" id="2_8j60k"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cmieeeji0ndb6" path="res://Scenes/cancha.tscn" id="3_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://ciuyitfgfhqlc" path="res://Scenes/arco.tscn" id="4_8j60k"]
 [ext_resource type="PackedScene" uid="uid://cbe376cy7ko6r" path="res://Scenes/arco_2.tscn" id="5_fo5ed"]
+[ext_resource type="PackedScene" uid="uid://bvvwas5t55n4i" path="res://Scenes/player_1.tscn" id="7_o06y3"]
+[ext_resource type="PackedScene" uid="uid://dnud1c41wheln" path="res://Scenes/pelota.tscn" id="8_k7acu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ukr8"]
 texture = ExtResource("1_5a7ea")
@@ -6495,13 +6497,24 @@ scale = Vector2(0.95232, 0.915391)
 z_index = 2
 position = Vector2(-4, -177)
 scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 7
 
 [node name="Arco2" parent="." instance=ExtResource("5_fo5ed")]
-z_index = 1
+z_index = 3
 position = Vector2(-9, 372)
 scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 3
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAD5//n/AQAAAD4AAAAGAPn/AQABAEMAAAD5/wkAAQAIAEMAAAAGAAkAAQAIAEMAAAD3//7/AQACAD8AAAD3/wMAAQACAD8AAAD3/wgAAQACAD8AAAAIAP7/AQAIAD8AAAAIAAMAAQAIAD8AAAAIAAgAAQAIAD8AAAA=")
 tile_set = SubResource("TileSet_5ukr8")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("7_o06y3")]
+z_index = 2
+collision_mask = 5
+
+[node name="Pelota" parent="." instance=ExtResource("8_k7acu")]
+z_index = 2
