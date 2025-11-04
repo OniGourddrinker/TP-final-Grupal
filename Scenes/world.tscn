@@ -6514,9 +6514,12 @@ tile_set = SubResource("TileSet_5ukr8")
 
 [node name="Pelota" parent="." instance=ExtResource("8_k7acu")]
 z_index = 2
+position = Vector2(1, 96)
+scale = Vector2(0.800785, 0.779541)
 
 [node name="Player1" parent="." instance=ExtResource("7_o06y3")]
 z_index = 2
+position = Vector2(-99, -21)
 collision_mask = 5
 control_scheme = 1
 speed = 300.0
