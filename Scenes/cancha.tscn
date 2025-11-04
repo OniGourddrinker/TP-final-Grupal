@@ -1,12 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmieeeji0ndb6"]
+[gd_scene load_steps=5 format=3 uid="uid://cmieeeji0ndb6"]
 
 [ext_resource type="Texture2D" uid="uid://07hs36akbp2k" path="res://Assets/13_School_16x16.png" id="1_1iti0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vbgog"]
 size = Vector2(99, 573)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0y13"]
-size = Vector2(628, 74)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i8e8a"]
 texture = ExtResource("1_1iti0")
@@ -2352,26 +2349,21 @@ sources/0 = SubResource("TileSetAtlasSource_i8e8a")
 collision_layer = 8
 collision_mask = 2
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-light_mask = 8
-visibility_layer = 2
-polygon = PackedVector2Array(401, 46, 785, 47, 783, 587, 401, 587, 401, 29, 796, 32, 798, 597, 388, 594, 391, 27)
-
 [node name="bordeIz" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(352.5, 318.5)
+position = Vector2(352.5, 326.5)
 shape = SubResource("RectangleShape2D_vbgog")
+debug_color = Color(0.91579, 0.216866, 0.4856, 0.42)
 
 [node name="bordeDer" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(831, 321)
 shape = SubResource("RectangleShape2D_vbgog")
+debug_color = Color(0.870108, 0.312704, 0.419751, 0.42)
 
-[node name="bordeSup" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(601, 10)
-shape = SubResource("RectangleShape2D_o0y13")
+[node name="bordeinferioir" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(407, 587, 526, 587, 527, 635, 660, 635, 659, 587, 777, 589, 777, 607, 695, 606, 696, 648, 499, 648, 497, 602, 407, 603)
 
-[node name="bordeIfe" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(595, 623)
-shape = SubResource("RectangleShape2D_o0y13")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(405, 47, 525, 47, 524, 1, 658, 1, 656, 47, 781, 47, 781, 34, 694, 34, 694, -3, 493, -4, 494, 31, 403, 29)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-576, -340)

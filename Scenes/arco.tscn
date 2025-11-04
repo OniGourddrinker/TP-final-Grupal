@@ -2561,3 +2561,4 @@ position = Vector2(3.5, 3.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAdentro"]
 shape = SubResource("RectangleShape2D_dq27g")
+debug_color = Color(0.215686, 0.913725, 0.054902, 0.419608)
