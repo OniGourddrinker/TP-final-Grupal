@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmacsm8hesj76"]
+
+[ext_resource type="Script" uid="uid://c68afivatyeig" path="res://Scenes/como_jugar.gd" id="1_mfosv"]
+[ext_resource type="Texture2D" uid="uid://sxbbctbitdsq" path="res://Assets/safeimagekit-Imagen principal par.png" id="2_o4moq"]
+[ext_resource type="Texture2D" uid="uid://xj2fsmmdfmga" path="res://Assets/como jogar.png" id="3_s46mv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s46mv"]
+bg_color = Color(0.0253638, 0.0253638, 0.0253638, 1)
+
+[node name="ComoJugar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mfosv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.560784)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_o4moq")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -35.0
+offset_top = -239.0
+offset_right = 14.0
+offset_bottom = -208.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_s46mv")
+text = "Atras
+"
+
+[node name="ComoJogar" type="Sprite2D" parent="."]
+position = Vector2(518, 383)
+texture = ExtResource("3_s46mv")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

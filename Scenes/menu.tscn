@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://t0ccajgs0ajq"]
+
+[ext_resource type="Script" uid="uid://dtmxicbcl1w5l" path="res://Scripts/menu.gd" id="1_1rerr"]
+[ext_resource type="Texture2D" uid="uid://sxbbctbitdsq" path="res://Assets/safeimagekit-Imagen principal par.png" id="2_xhh6f"]
+[ext_resource type="Texture2D" uid="uid://dmtsmwvd47u5t" path="res://Assets/LOS-DEL-FONDO-6-11-2025.png" id="3_cayip"]
+[ext_resource type="AudioStream" uid="uid://chdor7xjgl778" path="res://Assets/musica/sports-football-soccer-music-416518.mp3" id="4_158mb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cayip"]
+bg_color = Color(0.0687983, 0.0687983, 0.0687982, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_158mb"]
+bg_color = Color(0.103744, 0.103744, 0.103743, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwsa2"]
+bg_color = Color(0.147672, 0.147672, 0.147672, 1)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1rerr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xhh6f")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -37.0
+offset_top = -269.0
+offset_right = 43.0
+offset_bottom = -168.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="EmpezarBoton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../SalirBoton")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cayip")
+text = "Empezar"
+
+[node name="CJBoton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_158mb")
+text = "Como Jugar"
+
+[node name="SalirBoton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../EmpezarBoton")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wwsa2")
+text = "Salir"
+
+[node name="Los-del-fondo-6-11-2025" type="Sprite2D" parent="."]
+position = Vector2(517, 212)
+texture = ExtResource("3_cayip")
+
+[node name="Sports-football-soccer-music-416518" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_158mb")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="VBoxContainer/EmpezarBoton" to="." method="_on_empezar_boton_pressed"]
+[connection signal="pressed" from="VBoxContainer/CJBoton" to="." method="_on_cj_boton_pressed"]
+[connection signal="pressed" from="VBoxContainer/SalirBoton" to="." method="_on_salir_boton_pressed"]
