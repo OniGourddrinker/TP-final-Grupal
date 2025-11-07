@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://ciuyitfgfhqlc"]
 
-[ext_resource type="Script" uid="uid://sro0t6itt6ai" path="res://Scripts/arco.gd" id="1_8wjbm"]
+[ext_resource type="Script" uid="uid://wbeu0ts35r0w" path="res://Scenes/arco.gd" id="1_8wjbm"]
 [ext_resource type="Texture2D" uid="uid://07hs36akbp2k" path="res://Assets/13_School_16x16.png" id="1_dq27g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yvv17"]
@@ -2544,7 +2544,7 @@ texture = ExtResource("1_dq27g")
 sources/0 = SubResource("TileSetAtlasSource_yvv17")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dq27g"]
-size = Vector2(51, 25)
+size = Vector2(51, 17)
 
 [node name="Arco" type="StaticBody2D"]
 script = ExtResource("1_8wjbm")
@@ -2559,11 +2559,60 @@ position = Vector2(20, 12)
 polygon = PackedVector2Array(10, 6, 10, -21, -43, -21, -43, 8, -49, 8, -49, -33, 14, -33, 16, -33, 16, 8, 10, 8)
 
 [node name="AreaAdentro" type="Area2D" parent="."]
-unique_name_in_owner = true
 position = Vector2(3.5, 3.5)
-collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaAdentro"]
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_dq27g")
-debug_color = Color(0.215686, 0.913725, 0.054902, 0.419608)
+
+[node name="particulas" type="Node2D" parent="."]
+position = Vector2(3, -7)
+
+[node name="rojas" type="CPUParticles2D" parent="particulas"]
+emitting = false
+amount = 100
+one_shot = true
+explosiveness = 0.8
+randomness = 0.3
+local_coords = true
+direction = Vector2(0, -1)
+gravity = Vector2(0, 100)
+initial_velocity_min = 73.83
+initial_velocity_max = 161.08
+angular_velocity_min = 164.3
+angular_velocity_max = 241.61
+scale_amount_max = 2.0
+color = Color(0.743471, 0.315526, 0.185574, 1)
+
+[node name="azules" type="CPUParticles2D" parent="particulas"]
+emitting = false
+amount = 120
+one_shot = true
+explosiveness = 0.8
+randomness = 0.3
+local_coords = true
+direction = Vector2(0, -1)
+gravity = Vector2(0, 100)
+initial_velocity_min = 73.83
+initial_velocity_max = 161.08
+angular_velocity_min = 164.3
+angular_velocity_max = 241.61
+color = Color(0.197536, 0.479585, 0.75071, 1)
+
+[node name="amarillas" type="CPUParticles2D" parent="particulas"]
+emitting = false
+amount = 150
+one_shot = true
+explosiveness = 0.8
+randomness = 0.3
+local_coords = true
+direction = Vector2(0, -1)
+gravity = Vector2(0, 100)
+initial_velocity_min = 73.83
+initial_velocity_max = 161.08
+angular_velocity_min = 164.3
+angular_velocity_max = 241.61
+color = Color(0.882111, 0.829844, 0, 1)
+
+[connection signal="body_entered" from="AreaAdentro" to="." method="_on_area_adentro_body_entered"]

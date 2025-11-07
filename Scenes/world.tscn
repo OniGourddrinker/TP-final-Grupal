@@ -1,6 +1,8 @@
-[gd_scene load_steps=16 format=4 uid="uid://bktce58tsncdx"]
+[gd_scene load_steps=19 format=4 uid="uid://bktce58tsncdx"]
 
+[ext_resource type="Script" uid="uid://b1queuhauv4bk" path="res://Scripts/world.gd" id="1_0fj1v"]
 [ext_resource type="Texture2D" uid="uid://07hs36akbp2k" path="res://Assets/13_School_16x16.png" id="1_5a7ea"]
+[ext_resource type="PackedScene" uid="uid://tsi4l7ibk5ja" path="res://Scenes/scoreUI.tscn" id="1_5v1tr"]
 [ext_resource type="Texture2D" uid="uid://cf34w7u3lbcak" path="res://Assets/GRASS+.png" id="2_8j60k"]
 [ext_resource type="Texture2D" uid="uid://ccyctw7ws6a1x" path="res://Assets/gentle tree wall, canopy only.png" id="3_5ukr8"]
 [ext_resource type="PackedScene" uid="uid://cmieeeji0ndb6" path="res://Scenes/cancha.tscn" id="3_fo5ed"]
@@ -8,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cbe376cy7ko6r" path="res://Scenes/arco_2.tscn" id="5_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://bvvwas5t55n4i" path="res://Scenes/player_1.tscn" id="7_o06y3"]
 [ext_resource type="PackedScene" uid="uid://dnud1c41wheln" path="res://Scenes/pelota.tscn" id="8_k7acu"]
+[ext_resource type="AudioStream" uid="uid://cxplj5r7usdrq" path="res://Assets/musica/International Superstar Soccer 64 #2 (N64) (Soundtrack) - TvHead.mp3" id="11_ikia7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ukr8"]
 texture = ExtResource("1_5a7ea")
@@ -6482,6 +6485,10 @@ sources/2 = SubResource("TileSetAtlasSource_5v1tr")
 
 [node name="World" type="Node2D" groups=["world"]]
 position = Vector2(491, 353)
+script = ExtResource("1_0fj1v")
+
+[node name="scoreUI" parent="." instance=ExtResource("1_5v1tr")]
+z_index = 2
 
 [node name="Escuela" type="TileMapLayer" parent="."]
 position = Vector2(4, -2)
@@ -6517,22 +6524,31 @@ z_index = 2
 position = Vector2(1, 96)
 scale = Vector2(0.800785, 0.779541)
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Pelota"]
+
 [node name="Player1" parent="." instance=ExtResource("7_o06y3")]
 z_index = 2
-position = Vector2(-99, -21)
-collision_mask = 5
+position = Vector2(-1, 10)
+collision_mask = 12
 control_scheme = 1
 speed = 300.0
 
 [node name="Player2" parent="." instance=ExtResource("7_o06y3")]
 z_index = 2
-position = Vector2(102, 103)
-collision_mask = 5
+position = Vector2(-10, 158)
+collision_mask = 12
 control_scheme = 2
 speed = 300.0
 
 [node name="Player3" parent="." instance=ExtResource("7_o06y3")]
+visible = false
 z_index = 2
 position = Vector2(-136, 76)
 collision_mask = 5
 speed = 300.0
+
+[node name="InternationalSuperstarSoccer64#2(n64)(soundtrack)-TvHead" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_ikia7")
+autoplay = true
+
+[connection signal="screen_exited" from="Pelota/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dtmxicbcl1w5l" path="res://Scripts/menu.gd" id="1_1rerr"]
 [ext_resource type="Texture2D" uid="uid://sxbbctbitdsq" path="res://Assets/safeimagekit-Imagen principal par.png" id="2_xhh6f"]
 [ext_resource type="Texture2D" uid="uid://dmtsmwvd47u5t" path="res://Assets/LOS-DEL-FONDO-6-11-2025.png" id="3_cayip"]
-[ext_resource type="AudioStream" uid="uid://chdor7xjgl778" path="res://Assets/musica/sports-football-soccer-music-416518.mp3" id="4_158mb"]
+[ext_resource type="AudioStream" uid="uid://deigx5ydos2c3" path="res://Assets/musica/football-anthem-clube-de-regatas-do-flamengo-102997.mp3" id="4_158mb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cayip"]
 bg_color = Color(0.0687983, 0.0687983, 0.0687982, 1)
@@ -68,10 +68,9 @@ text = "Salir"
 position = Vector2(517, 212)
 texture = ExtResource("3_cayip")
 
-[node name="Sports-football-soccer-music-416518" type="AudioStreamPlayer" parent="."]
+[node name="Football-anthem-clube-de-regatas-do-flamengo-102997" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_158mb")
 autoplay = true
-parameters/looping = true
 
 [connection signal="pressed" from="VBoxContainer/EmpezarBoton" to="." method="_on_empezar_boton_pressed"]
 [connection signal="pressed" from="VBoxContainer/CJBoton" to="." method="_on_cj_boton_pressed"]

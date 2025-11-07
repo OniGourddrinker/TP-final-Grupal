@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cxplj5r7usdrq"
+path="res://.godot/imported/International Superstar Soccer 64 #2 (N64) (Soundtrack) - TvHead.mp3-19f43b61a20a26ef11678c5ff058b0f4.mp3str"
+
+[deps]
+
+source_file="res://Assets/musica/International Superstar Soccer 64 #2 (N64) (Soundtrack) - TvHead.mp3"
+dest_files=["res://.godot/imported/International Superstar Soccer 64 #2 (N64) (Soundtrack) - TvHead.mp3-19f43b61a20a26ef11678c5ff058b0f4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
