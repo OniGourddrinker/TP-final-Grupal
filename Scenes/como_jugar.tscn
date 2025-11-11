@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmacsm8hesj76"]
+[gd_scene load_steps=6 format=3 uid="uid://dmacsm8hesj76"]
 
 [ext_resource type="Script" uid="uid://c68afivatyeig" path="res://Scenes/como_jugar.gd" id="1_mfosv"]
 [ext_resource type="Texture2D" uid="uid://sxbbctbitdsq" path="res://Assets/safeimagekit-Imagen principal par.png" id="2_o4moq"]
 [ext_resource type="Texture2D" uid="uid://xj2fsmmdfmga" path="res://Assets/como jogar.png" id="3_s46mv"]
+[ext_resource type="AudioStream" uid="uid://deigx5ydos2c3" path="res://Assets/musica/football-anthem-clube-de-regatas-do-flamengo-102997.mp3" id="4_4kunq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s46mv"]
 bg_color = Color(0.0253638, 0.0253638, 0.0253638, 1)
@@ -48,5 +49,9 @@ text = "Atras
 [node name="ComoJogar" type="Sprite2D" parent="."]
 position = Vector2(518, 383)
 texture = ExtResource("3_s46mv")
+
+[node name="Football-anthem-clube-de-regatas-do-flamengo-102997" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_4kunq")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
