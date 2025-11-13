@@ -1,13 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://dnud1c41wheln"]
 
 [ext_resource type="Texture2D" uid="uid://buqttxhv12ayy" path="res://Assets/icono-vector-futbol-pixel-art-soccer-ball-juego-8-bits-sobre-fondo-blanco_360488-1067-removebg-preview.png" id="1_r0bop"]
-[ext_resource type="Script" uid="uid://3k3gag7eury6" path="res://Scenes/pelota.gd" id="1_usuhk"]
+[ext_resource type="Script" uid="uid://3k3gag7eury6" path="res://Scripts/pelota.gd" id="1_usuhk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0bop"]
 rough = true
 bounce = 0.5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_usuhk"]
+radius = 10.0499
 
 [node name="Pelota" type="Node2D"]
 script = ExtResource("1_usuhk")

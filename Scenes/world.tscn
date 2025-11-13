@@ -6521,22 +6521,20 @@ tile_set = SubResource("TileSet_5ukr8")
 
 [node name="Pelota" parent="." instance=ExtResource("8_k7acu")]
 z_index = 2
-position = Vector2(1, 96)
+position = Vector2(0, 97)
 scale = Vector2(0.800785, 0.779541)
-
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Pelota"]
 
 [node name="Player1" parent="." instance=ExtResource("7_o06y3")]
 z_index = 2
 position = Vector2(-1, 10)
-collision_mask = 12
+collision_mask = 5
 control_scheme = 1
 speed = 300.0
 
 [node name="Player2" parent="." instance=ExtResource("7_o06y3")]
 z_index = 2
 position = Vector2(-10, 158)
-collision_mask = 12
+collision_mask = 5
 control_scheme = 2
 speed = 300.0
 
@@ -6550,5 +6548,3 @@ speed = 300.0
 [node name="InternationalSuperstarSoccer64#2(n64)(soundtrack)-TvHead" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_ikia7")
 autoplay = true
-
-[connection signal="screen_exited" from="Pelota/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

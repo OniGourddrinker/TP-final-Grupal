@@ -12,10 +12,10 @@ func _process(_delta):
 	pass
 
 
-func _on_area_adentro_body_entered(body):
-	 # Primero solo ponemos esto para probar
+func _on_area_2d_body_entered(body):
+	# Primero solo ponemos esto para probar
 	print("Algo entró al arco: ", body.name)
-	print("Nombre de la escena actual:", get_tree().current_scene.name)
+	
 	# Si es la pelota (RigidBody2D)
 	if body is RigidBody2D:
 		print("1 GOL!")
@@ -30,9 +30,9 @@ func _on_area_adentro_body_entered(body):
 					child.emitting = true
 					print("Partículas activadas: ", child.name)
 		
-	# Sumar gol al PLAYER 2 (porque la pelota entró en arco del Player 1)
+		# Sumar gol al PLAYER 1 (porque la pelota entró en arco del Player 2)
 		var score_ui = get_node("/root/World/scoreUI")
 		if score_ui:
-			score_ui.add_goal_player2()
+			score_ui.add_goal_player1()
 		else:
 			print("ERROR: No se encontró ScoreUI")

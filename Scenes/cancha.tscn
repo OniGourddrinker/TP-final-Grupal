@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://07hs36akbp2k" path="res://Assets/13_School_16x16.png" id="1_1iti0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vbgog"]
-size = Vector2(99, 573)
+size = Vector2(110.25, 570)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i8e8a"]
 texture = ExtResource("1_1iti0")
@@ -2350,20 +2350,20 @@ collision_layer = 8
 collision_mask = 3
 
 [node name="bordeIz" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(352.5, 326.5)
+position = Vector2(353.875, 325)
 shape = SubResource("RectangleShape2D_vbgog")
 debug_color = Color(0.91579, 0.216866, 0.4856, 0.42)
 
 [node name="bordeDer" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(831, 321)
+position = Vector2(826.75, 321)
 shape = SubResource("RectangleShape2D_vbgog")
 debug_color = Color(0.870108, 0.312704, 0.419751, 0.42)
 
 [node name="bordeinferioir" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(407, 587, 526, 587, 527, 635, 660, 635, 659, 587, 777, 589, 777, 607, 695, 606, 696, 648, 499, 648, 497, 602, 407, 603)
+polygon = PackedVector2Array(407, 587, 526, 587, 526, 656, 659, 656, 659, 587, 782, 585, 782, 607, 695, 606, 705, 691, 490, 691, 494, 609, 407, 608)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(405, 47, 525, 47, 524, 1, 658, 1, 656, 47, 781, 47, 781, 34, 694, 34, 694, -3, 493, -4, 494, 31, 403, 29)
+polygon = PackedVector2Array(379, 46, 525, 47, 527, -25, 657, -25, 656, 47, 803, 46, 781, 19, 695, 19, 695, -53, 496, -53, 496, 18, 402, 18)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-576, -340)

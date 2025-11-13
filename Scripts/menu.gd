@@ -1,5 +1,6 @@
 extends Control
 func _ready() -> void:
+	get_tree().paused = false
 	$VBoxContainer/EmpezarBoton.grab_focus()
 
 func _on_empezar_boton_pressed() -> void:

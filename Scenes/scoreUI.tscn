@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://tsi4l7ibk5ja"]
 
-[ext_resource type="Script" uid="uid://b3j1l4eyljeva" path="res://Scenes/score_ui.gd" id="1_47jr6"]
+[ext_resource type="Script" uid="uid://b3j1l4eyljeva" path="res://Scripts/score_ui.gd" id="1_47jr6"]
 
 [node name="scoreUI" type="Control" groups=["pelota"]]
 layout_mode = 3

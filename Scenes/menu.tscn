@@ -40,12 +40,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -37.0
-offset_top = -269.0
-offset_right = 43.0
-offset_bottom = -168.0
+offset_left = 272.0
+offset_top = -171.0
+offset_right = 494.0
+offset_bottom = -92.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(1, 2)
+alignment = 1
 
 [node name="EmpezarBoton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -59,18 +61,21 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_158mb")
 text = "Como Jugar"
 
 [node name="SalirBoton" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../EmpezarBoton")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wwsa2")
 text = "Salir"
 
 [node name="Los-del-fondo-6-11-2025" type="Sprite2D" parent="."]
-position = Vector2(517, 212)
+position = Vector2(290, 169)
+scale = Vector2(0.618652, 0.976959)
 texture = ExtResource("3_cayip")
 
 [node name="Football-anthem-clube-de-regatas-do-flamengo-102997" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_158mb")
 autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="VBoxContainer/EmpezarBoton" to="." method="_on_empezar_boton_pressed"]
 [connection signal="pressed" from="VBoxContainer/CJBoton" to="." method="_on_cj_boton_pressed"]

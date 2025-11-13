@@ -52,27 +52,3 @@ func flip_sprite()-> void:
 	elif heading == Vector2.LEFT:
 		player_sprite.flip_h = true
 		
-		
-		
-		
-		
-		
-
-
-
-#	if Input.is_action_just_pressed("patada") and is_on_floor():
-#		velocity.y = JUMP_VELOCITY
-
-#	var direction := Input.get_axis("izquierda", "derecha")
-#	if direction:
-#		velocity.x = direction * SPEED
-#	else:
-#		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
-	#Agregue direccion en y para que pueda moverse arriba y abajo copiando el codigo de derecha izquierda
-	#No recuerdo cual era la forma que lo hacia el profe
-#	var directiony := Input.get_axis("arriba", "abajo")
-#	if directiony:
-#		velocity.y = directiony * SPEED
-#	else:
-#		velocity.y = move_toward(velocity.y, 0, SPEED)
