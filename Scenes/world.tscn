@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bktce58tsncdx"]
+[gd_scene load_steps=20 format=4 uid="uid://bktce58tsncdx"]
 
 [ext_resource type="Script" uid="uid://b1queuhauv4bk" path="res://Scripts/world.gd" id="1_0fj1v"]
 [ext_resource type="Texture2D" uid="uid://07hs36akbp2k" path="res://Assets/13_School_16x16.png" id="1_5a7ea"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cbe376cy7ko6r" path="res://Scenes/arco_2.tscn" id="5_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://bvvwas5t55n4i" path="res://Scenes/player_1.tscn" id="7_o06y3"]
 [ext_resource type="PackedScene" uid="uid://dnud1c41wheln" path="res://Scenes/pelota.tscn" id="8_k7acu"]
+[ext_resource type="PackedScene" uid="uid://d36yqleirkyba" path="res://Scenes/player_2.tscn" id="11_7yui6"]
 [ext_resource type="AudioStream" uid="uid://cxplj5r7usdrq" path="res://Assets/musica/International Superstar Soccer 64 #2 (N64) (Soundtrack) - TvHead.mp3" id="11_ikia7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5ukr8"]
@@ -6519,23 +6520,20 @@ scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAD5//n/AQAAAD4AAAAGAPn/AQABAEMAAAD5/wkAAQAIAEMAAAAGAAkAAQAIAEMAAAD3//7/AQACAD8AAAD3/wMAAQACAD8AAAD3/wgAAQACAD8AAAAIAP7/AQAIAD8AAAAIAAMAAQAIAD8AAAAIAAgAAQAIAD8AAAA=")
 tile_set = SubResource("TileSet_5ukr8")
 
-[node name="Pelota" parent="." instance=ExtResource("8_k7acu")]
-z_index = 2
-position = Vector2(0, 97)
-scale = Vector2(0.800785, 0.779541)
-
 [node name="Player1" parent="." instance=ExtResource("7_o06y3")]
 z_index = 2
 position = Vector2(-1, 10)
 collision_mask = 5
-control_scheme = 1
+control_scheme = 2
 speed = 300.0
 
-[node name="Player2" parent="." instance=ExtResource("7_o06y3")]
-z_index = 2
-position = Vector2(-10, 158)
-collision_mask = 5
-control_scheme = 2
+[node name="Pelota" parent="." instance=ExtResource("8_k7acu")]
+position = Vector2(3, 98)
+
+[node name="Player_2" parent="." instance=ExtResource("11_7yui6")]
+z_index = 1
+position = Vector2(-1, 154)
+control_scheme = 1
 speed = 300.0
 
 [node name="Player3" parent="." instance=ExtResource("7_o06y3")]
