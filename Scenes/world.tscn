@@ -6533,14 +6533,8 @@ position = Vector2(3, 98)
 [node name="Player_2" parent="." instance=ExtResource("11_7yui6")]
 z_index = 1
 position = Vector2(-1, 154)
-control_scheme = 1
-speed = 300.0
-
-[node name="Player3" parent="." instance=ExtResource("7_o06y3")]
-visible = false
-z_index = 2
-position = Vector2(-136, 76)
 collision_mask = 5
+control_scheme = 1
 speed = 300.0
 
 [node name="InternationalSuperstarSoccer64#2(n64)(soundtrack)-TvHead" type="AudioStreamPlayer" parent="."]

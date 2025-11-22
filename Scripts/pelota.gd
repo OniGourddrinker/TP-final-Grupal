@@ -1,8 +1,8 @@
 extends Node2D
+@onready var _pelota = $Pelota
 
 var velocity := Vector2.ZERO
 
 func stop() -> void:
-	velocity = Vector2.ZERO
-	rotation = 0
+	_pelota.rotation = 0
 	print("pelota parada")

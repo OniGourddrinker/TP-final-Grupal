@@ -20,8 +20,9 @@ func _on_area_2d_body_entered(body):
 	if body is RigidBody2D:
 		print("1 GOL!")
 		# Congelar la pelota
-		body.freeze = true
+		body.sleeping = true
 		body.linear_velocity = Vector2.ZERO
+		body.angular_velocity = 0.0
 		
 		# Activar TODAS las partículas dentro del Node2D
 		if container_particulas:

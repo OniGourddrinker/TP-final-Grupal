@@ -2360,10 +2360,10 @@ shape = SubResource("RectangleShape2D_vbgog")
 debug_color = Color(0.870108, 0.312704, 0.419751, 0.42)
 
 [node name="bordeinferioir" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(407, 587, 526, 587, 526, 656, 659, 656, 659, 587, 782, 585, 782, 607, 695, 606, 705, 691, 490, 691, 494, 609, 407, 608)
+polygon = PackedVector2Array(395, 586, 526, 587, 526, 656, 659, 656, 659, 587, 782, 585, 782, 691, 705, 691, 490, 691, 395, 691)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(379, 46, 525, 47, 527, -25, 657, -25, 656, 47, 803, 46, 781, 19, 695, 19, 695, -53, 496, -53, 496, 18, 402, 18)
+[node name="Bordesuperior" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(379, 46, 525, 47, 527, -25, 657, -25, 656, 47, 803, 46, 803, -53, 695, -53, 496, -53, 380, -53)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-576, -340)
